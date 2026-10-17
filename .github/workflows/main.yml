@@ -1,0 +1,13 @@
+name: Marketplace Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check monitor status
+        run: echo "Marketplace monitor scheduled successfully"
